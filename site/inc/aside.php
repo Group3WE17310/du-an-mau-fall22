@@ -119,7 +119,7 @@
                  if (isset($_POST['btn_login'])) {
                     $email=$_POST['acc'];
                     $mat_khau=($_POST['pass']);
-                    $acc=kh_select_by_email($email,$mat_khau)
+                    $acc=kh_select_by_email($email,$mat_khau);
                    
                     $user_name=$acc['ten_kh'];
                         
