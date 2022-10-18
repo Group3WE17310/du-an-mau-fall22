@@ -36,5 +36,9 @@
         $sql = "SELECT count(*) FROM hang_hoa WHERE ma_hh=?";
         return pdo_query_value($sql, $ma_hh) > 0;
        }
+       function hh_tang_luot_xem($ma_hh){
+        $sql = "UPDATE hang_hoa SET so_luot_xem = so_luot_xem + 1 WHERE ma_hh=?";
+        return pdo_execute($sql, $ma_hh);
+       }
                             
 ?>
