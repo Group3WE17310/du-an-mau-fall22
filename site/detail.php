@@ -23,6 +23,11 @@
         require '../dao/pdo.php';
         require '../dao/hang_hoa.php';
     ?>
+    <?php
+        $hang_hoa = hh_select_by_id($ma_hh);
+        extract($hang_hoa);
+        hh_tang_luot_xem($ma_hh);
+    ?>
     <div class="row-main">
         <div class="row">
             <h1>SẢN PHẨM CHI TIẾT</h1>
